@@ -9,9 +9,9 @@ Installation Instructions:
 - delete typo3temp/Cache/Code/*
 - clear typo3cache
 
-- rootpath for downloadfiles has to be set in page settings of "download root page" ( e.g. Version1.0 ) in tab "Resources" field "Wurzelpfad für Downloadelemente ( "/fileadmin/user_upload/content/" )"
+- rootpath for downloadfiles has to be set in page settings of "download root page" ( e.g. Version1.0 ) in tab "Resources" field "Rootpath for download elements ( "/user_upload/content/" )"
 - create new pages underneath this root page and fill with plugin "Downloads". Inside plugin set relative path.
-- reindex by clicking on "Dateien indexieren" next to "Logout-Button"
+- reindex by clicking on "Reindex files" next to "Logout-Button"
 
 
 Pitfalls/Problems:
