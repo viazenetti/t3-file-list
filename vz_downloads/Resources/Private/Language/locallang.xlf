@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T17:28:42Z" product-name="vz_downloads">
+		<header/>
+		<body>
+			<trans-unit id="list.download_archive_label">
+				<source>Download all specifications of this category</source>
+			</trans-unit>
+		    <trans-unit id="root_path_missing">
+				<source>The root path in page settings is missing.</source>
+			</trans-unit>
+            <trans-unit id="directory_error">
+				<source>The directory is not set in plugin config or missing.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

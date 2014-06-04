@@ -1,0 +1,20 @@
+{namespace vz=VZ\VzDownloads\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:section name="main">
+<h1>{data.header}</h1>
+
+<f:flashMessages renderMode="div" />
+
+<ul>
+    <f:for each="{downloads}" as="download">
+        <li class="{download.extension}"><a href="/fileadmin{download.identifier}" title="<vz:prepareFilename filename="{download.name}" removeUnderscore="1" />" target="_blank"><vz:prepareFilename filename="{download.name}" removeUnderscore="1" /> (<vz:filesize filesize="{download.size}" />)</a></li>
+    </f:for>
+</ul>
+
+<f:if condition="{archivePath}">
+    <a href="/fileadmin{archivePath}"><f:translate key="LLL:EXT:vz_downloads/Resources/Private/Language/locallang.xlf:list.download_archive_label" /></a>
+</f:if>
+
+</f:section>

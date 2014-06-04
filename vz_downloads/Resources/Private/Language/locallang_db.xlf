@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T17:28:42Z" product-name="vz_downloads">
+		<header/>
+		<body>
+			<trans-unit id="pages.tx_vzdownloads_basepath">
+				<source>Rootpath for download elements ( "/user_upload/content/" )</source>
+			</trans-unit>
+			<trans-unit id="flexform_downloadlist.sheet_general">
+				<source>General</source>
+			</trans-unit>
+		    <trans-unit id="flexform_downloadlist.agree_eula">
+				<source>activate "agree EULA" CSS class</source>
+			</trans-unit>
+            <trans-unit id="flexform_downloadlist.directory">
+                <source>Directorypath (relative to rootpath)</source>
+            </trans-unit>
+			<trans-unit id="flexform_downloadlist.archive_path">
+				<source>Path to archive (relative to rootpath)</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
