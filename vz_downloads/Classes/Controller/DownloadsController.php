@@ -68,23 +68,11 @@ class DownloadsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 	}
 
 	/**
-	 * downloadsRepository
-	 *
-	 * @var \VZ\VzDownloads\Domain\Repository\DownloadsRepository
-	 * @inject
-	 */
-	protected $downloadsRepository = NULL;
-
-	/**
 	 * action list
 	 *
 	 * @return void
 	 */
 	public function listAction() {
-
-		$scheduler = $this->objectManager->get('\\TYPO3\\CMS\\Scheduler\\Scheduler');
-		$task = $scheduler->fetchTask(3);
-		$scheduler->executeTask($scheduler->fetchTask(3));
 
 		if($this->getBasePath() === false) {
 			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate( 'root_path_missing', 'vz_downloads' ));
