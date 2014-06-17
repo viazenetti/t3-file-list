@@ -17,37 +17,3 @@ plugin.tx_vzdownloads {
 	    taskId = {$plugin.tx_vzdownloads.settings.taskId}
 	}
 }
-
-plugin.tx_vzdownloads._CSS_DEFAULT_STYLE (
-	textarea.f3-form-error {
-		background-color:#FF9F9F;
-		border: 1px #FF0000 solid;
-	}
-
-	input.f3-form-error {
-		background-color:#FF9F9F;
-		border: 1px #FF0000 solid;
-	}
-
-	.tx-vz-downloads table {
-		border-collapse:separate;
-		border-spacing:10px;
-	}
-
-	.tx-vz-downloads table th {
-		font-weight:bold;
-	}
-
-	.tx-vz-downloads table td {
-		vertical-align:top;
-	}
-
-	.typo3-messages .message-error {
-		color:red;
-	}
-
-	.typo3-messages .message-ok {
-		color:green;
-	}
-
-)

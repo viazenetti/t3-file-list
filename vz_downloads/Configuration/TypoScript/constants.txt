@@ -1,19 +1,21 @@
 
 plugin.tx_vzdownloads {
 	view {
-		# cat=plugin.tx_vzdownloads/file; type=string; label=Path to template root (FE)
+		# cat=vz Downloads/file/u; type=string; label=Path to template root (FE)
 		templateRootPath = EXT:vz_downloads/Resources/Private/Templates/
-		# cat=plugin.tx_vzdownloads/file; type=string; label=Path to template partials (FE)
+		# cat=vz Downloads/file/v; type=string; label=Path to template partials (FE)
 		partialRootPath = EXT:vz_downloads/Resources/Private/Partials/
-		# cat=plugin.tx_vzdownloads/file; type=string; label=Path to template layouts (FE)
+		# cat=vz Downloads/file/w; type=string; label=Path to template layouts (FE)
 		layoutRootPath = EXT:vz_downloads/Resources/Private/Layouts/
 	}
 	persistence {
-		# cat=plugin.tx_vzdownloads//a; type=string; label=Default storage PID
+		# cat=vz Downloads//a; type=integer; label=Default storage PID
 		storagePid =
 	}
 	settings {
+		# cat=vz Downloads/file/a; type=string; label=Allowed file extensions: A list of all file extensions that are scanned and displayed
 	    fileExtensions = pdf,zip
-	    taskId = 3
+		# cat=vz Downloads/others/a; type=integer; label=Scheduler Task ID: The id of the scheduler FAL task that updates the storage index
+	    taskId = 1
 	}
 }

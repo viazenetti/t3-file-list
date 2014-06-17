@@ -74,12 +74,13 @@ class DownloadsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 	 */
 	public function listAction() {
 
-		if($this->getBasePath() === false) {
+		$basePath = $this->getBasePath();
+        if($basePath === false) {
 			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate( 'root_path_missing', 'vz_downloads' ));
 			return;
 		}
 
-		$directoryPath = $this->getBasePath() . $this->settings['directory'];
+		$directoryPath = $basePath . trim($this->settings['directory'], ' /') . '/';
 		if(!is_dir(str_replace('//', '/', PATH_site . $GLOBALS['TYPO3_CONF_VARS']['BE']['fileadminDir'] . $directoryPath))) {
 			$this->addFlashMessage(\TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate( 'directory_error', 'vz_downloads' ));
 			return;
@@ -99,11 +100,8 @@ class DownloadsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 	protected function findByFolder($folder){
 
 		$extensionsAr = explode(',', $this->settings['fileExtensions']);
-		$extensions = "";
-		foreach($extensionsAr as $ext) {
-			$extensions .= "'" . trim($ext) . "',";
-		}
-		$extensions = rtrim($extensions, ',');
+        $extensionsAr = array_map('trim', $extensionsAr);
+		$extensions = "'" . implode("','", $extensionsAr) . "'";
 
 		$resultRows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows(
 			implode(',', $this->fields),
@@ -129,7 +127,7 @@ class DownloadsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
 		foreach($rootline as $rootlineItem) {
 			if($rootlineItem['tx_vzdownloads_basepath'] !== '') {
-				return $rootlineItem['tx_vzdownloads_basepath'];
+				return '/' . trim($rootlineItem['tx_vzdownloads_basepath'], ' /') . '/';
 			}
 		}
 
