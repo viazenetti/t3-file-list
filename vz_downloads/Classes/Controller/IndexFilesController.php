@@ -48,8 +48,11 @@ class IndexFilesController {
 
 		$scheduler = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('\\TYPO3\\CMS\\Scheduler\\Scheduler');
 
-		$task = $scheduler->fetchTask($this->extConf['taskId']);
-		$result = $scheduler->executeTask($task);
+		$filesTask = $scheduler->fetchTask($this->extConf['filesTaskId']);
+		$filesResult = $scheduler->executeTask($filesTask);
+
+		$metadataTask = $scheduler->fetchTask($this->extConf['metadataTaskId']);
+		$metadataResult = $scheduler->executeTask($metadataTask);
 
 	}
 

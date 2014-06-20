@@ -17,6 +17,21 @@ if (!defined('TYPO3_MODE')) {
 	)
 );
 
+
+\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+	'VZ.' . $_EXTKEY,
+	'Euladata',
+	array(
+		'Eula' => 'list, show',
+
+	),
+	// non-cacheable actions
+	array(
+		'Eula' => 'list, show',
+
+	)
+);
+
 $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ($GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] == '' ? '' : ',') . 'tx_vzdownloads_basepath,';
 
 // REGISTER CACHE MENU ENTRY MANIPULATOR

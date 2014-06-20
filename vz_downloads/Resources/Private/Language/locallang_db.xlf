@@ -18,6 +18,22 @@
 			<trans-unit id="flexform_downloadlist.archive_path">
 				<source>Path to archive (relative to rootpath)</source>
 			</trans-unit>
+            <trans-unit id="tx_vzdownloads_domain_model_eula">
+                <source>Eula Datensatz</source>
+            </trans-unit>
+            <trans-unit id="tx_vzdownloads_domain_model_eula.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_vzdownloads_domain_model_eula.header">
+                <source>Überschrift</source>
+            </trans-unit>
+            <trans-unit id="tx_vzdownloads_domain_model_eula.body">
+                <source>Body Text</source>
+            </trans-unit>
+            <trans-unit id="sys_file_metadata.tx_vzdownloads_euladata">
+                <source>Euladata</source>
+            </trans-unit>
+
 		</body>
 	</file>
 </xliff>

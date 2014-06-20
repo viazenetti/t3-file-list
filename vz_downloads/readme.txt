@@ -5,7 +5,9 @@ Installation Instructions:
 - install "scheduler" Extension
 - disable "Protokollierung aktivieren [basic.enableBELog]" in scheduler Extension settings ( Extensionmanager ) for "Dateien indexieren" Button to work
 - create new task of class "Dateiabstraktionsschicht: Speicherindex aktualisieren", Typ "einmalig"
-- set task id of just created task in extension settings of "vz_downloads" (Extensionmanager)
+- create new task of class "Dateiabstraktionsschicht: Metadaten in Speicher entpacken (scheduler)", Typ "einmalig"
+- set task id for both created tasks in extension settings of "vz_downloads" (Extensionmanager)
+- set storage pid for sys folder containing eula data in ts constants
 - delete typo3temp/Cache/Code/*
 - clear typo3cache
 

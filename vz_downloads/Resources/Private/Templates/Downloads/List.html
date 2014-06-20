@@ -9,7 +9,7 @@
 
 <ul>
     <f:for each="{downloads}" as="download">
-        <li class="{download.extension}"><a href="/fileadmin{download.identifier}" title="<vz:prepareFilename filename="{download.name}" removeUnderscore="1" />" target="_blank"><vz:prepareFilename filename="{download.name}" removeUnderscore="1" /> (<vz:filesize filesize="{download.size}" />)</a></li>
+        <li class="{download.extension}"><a href="/fileadmin{download.identifier}" title="<vz:prepareFilename filename="{download.name}" removeUnderscore="1" />" target="_blank" <vz:addEulaTag id="{download.tx_vzdownloads_euladata}" />><vz:prepareFilename filename="{download.name}" removeUnderscore="1" /> (<vz:filesize filesize="{download.size}" />)</a></li>
     </f:for>
 </ul>
 

@@ -45,7 +45,7 @@ class DownloadsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 	/**
 	 * @var string
 	 */
-	protected $table = 'sys_file';
+	protected $table = 'sys_file f, sys_file_metadata m';
 
 	/**
 	 * A list of properties which are to be fetched
@@ -53,8 +53,8 @@ class DownloadsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 	 * @var array
 	 */
 	protected $fields = array(
-		'uid', 'pid', 'missing', 'type', 'storage', 'identifier', 'identifier_hash', 'extension',
-		'mime_type', 'name', 'sha1', 'size', 'creation_date', 'modification_date', 'folder_hash'
+		'f.uid', 'f.pid', 'f.missing', 'f.type', 'f.storage', 'f.identifier', 'f.identifier_hash', 'f.extension',
+		'f.mime_type', 'f.name', 'f.sha1', 'f.size', 'f.creation_date', 'f.modification_date', 'f.folder_hash, m.title, m.tx_vzdownloads_euladata'
 	);
 
 	/**
@@ -103,10 +103,12 @@ class DownloadsController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $extensionsAr = array_map('trim', $extensionsAr);
 		$extensions = "'" . implode("','", $extensionsAr) . "'";
 
+		$fields = implode(',', $this->fields);
+
 		$resultRows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows(
-			implode(',', $this->fields),
+			$fields,
 			$this->table,
-			"identifier LIKE " . $GLOBALS['TYPO3_DB']->fullQuoteStr($folder.'%', $this->table) . " AND missing = 0 AND extension IN (" . $extensions . ")",
+			"f.identifier LIKE " . $GLOBALS['TYPO3_DB']->fullQuoteStr($folder.'%', $this->table) . " AND f.missing = 0 AND f.extension IN (" . $extensions . ") AND m.file = f.uid",
 			'',
 			'',
 			'',

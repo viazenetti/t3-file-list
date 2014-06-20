@@ -3,9 +3,12 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2014-06-02T17:28:42Z" product-name="vz_downloads">
 		<header/>
 		<body>
-			<trans-unit id="config.taskId">
-				<source>Task id for updating the fal index</source>
+			<trans-unit id="config.filesTaskId">
+				<source>Task id for updating the fal files index</source>
 			</trans-unit>
+            <trans-unit id="config.metadataTaskId">
+                <source>Task id for updating the fal metadata index</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

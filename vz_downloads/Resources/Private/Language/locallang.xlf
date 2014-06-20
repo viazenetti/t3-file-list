@@ -12,6 +12,18 @@
             <trans-unit id="directory_error">
 				<source>The directory is not set in plugin config or missing.</source>
 			</trans-unit>
+            <trans-unit id="tx_vzdownloadstwo_domain_model_eula">
+                <source>Eula</source>
+            </trans-unit>
+            <trans-unit id="tx_vzdownloadstwo_domain_model_eula.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_vzdownloadstwo_domain_model_eula.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="tx_vzdownloadstwo_domain_model_eula.body">
+                <source>Body</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

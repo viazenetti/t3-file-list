@@ -17,3 +17,17 @@ plugin.tx_vzdownloads {
 	    taskId = {$plugin.tx_vzdownloads.settings.taskId}
 	}
 }
+eulaList = PAGE
+eulaList {
+	typeNum = 477
+
+	10 < tt_content.list.20.vzdownloads_euladata
+
+	config {
+		disableAllHeaderCode = 1
+		#additionalHeaders = Content-type: application/json
+		xhtml_cleaning = 0
+		admPanel = 0
+		debug = 0
+	}
+}
