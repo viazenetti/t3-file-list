@@ -19,21 +19,23 @@
 				<source>Path to archive (relative to rootpath)</source>
 			</trans-unit>
             <trans-unit id="tx_vzdownloads_domain_model_eula">
-                <source>Eula Datensatz</source>
+                <source>EULA</source>
             </trans-unit>
             <trans-unit id="tx_vzdownloads_domain_model_eula.title">
-                <source>Title</source>
+                <source>Internal title</source>
             </trans-unit>
             <trans-unit id="tx_vzdownloads_domain_model_eula.header">
-                <source>Überschrift</source>
+                <source>EULA title</source>
             </trans-unit>
             <trans-unit id="tx_vzdownloads_domain_model_eula.body">
-                <source>Body Text</source>
+                <source>EULA text</source>
             </trans-unit>
             <trans-unit id="sys_file_metadata.tx_vzdownloads_euladata">
-                <source>Euladata</source>
+                <source>EULA for this file</source>
             </trans-unit>
-
+            <trans-unit id="sys_file_metadata.tx_vzdownloads_euladata.default">
+                <source>-- No EULA selected --</source>
+            </trans-unit>
 		</body>
 	</file>
 </xliff>

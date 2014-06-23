@@ -13,7 +13,7 @@
 				<source>The directory is not set in plugin config or missing.</source>
 			</trans-unit>
             <trans-unit id="tx_vzdownloadstwo_domain_model_eula">
-                <source>Eula</source>
+                <source>EULA</source>
             </trans-unit>
             <trans-unit id="tx_vzdownloadstwo_domain_model_eula.title">
                 <source>Title</source>

@@ -10,7 +10,7 @@ plugin.tx_vzdownloads {
 	}
 	persistence {
 		# cat=vz Downloads//a; type=integer; label=Default storage PID
-		storagePid = 20
+		storagePid = 0
 	}
 	settings {
 		# cat=vz Downloads/file/a; type=string; label=Allowed file extensions: A list of all file extensions that are scanned and displayed

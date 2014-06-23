@@ -1,20 +1,35 @@
 {namespace vz=VZ\VzDownloads\ViewHelpers}
 
 <f:layout name="Default" />
+<f:debug>{_all}</f:debug>
 
 <f:section name="main">
-<h1>{data.header}</h1>
+<f:debug>{_all}</f:debug>
 
 <f:flashMessages renderMode="div" />
+<div class="vz-download-box" data-eula-link="/?type=477&tx_vzdownloads_euladata[id]=">
+	<div class="csc-header">
+		<div class="c-head-group has-body">
+			<h2>{data.header}</h2>
+			<h3>{data.subheader } <span><f:count subject="{downloads}" /> files</span></h3>
+		</div>
+	</div>
 
-<ul>
-    <f:for each="{downloads}" as="download">
-        <li class="{download.extension}"><a href="/fileadmin{download.identifier}" title="<vz:prepareFilename filename="{download.name}" removeUnderscore="1" />" target="_blank" <vz:addEulaTag id="{download.tx_vzdownloads_euladata}" />><vz:prepareFilename filename="{download.name}" removeUnderscore="1" /> (<vz:filesize filesize="{download.size}" />)</a></li>
-    </f:for>
-</ul>
+	<ul class="csc-uploads">
+		<f:for each="{downloads}" as="download">
+			<li class="{download.extension}"{vz:addEulaTag(id:download.tx_vzdownloads_euladata)} title="Download: {download.name}">
+				<a href="/fileadmin{download.identifier}" target="_blank"><f:image src="typo3conf/templates/images/fileicons/{download.extension}.gif" alt="{download.extension}-file"/></a>
+				<span><a href="/fileadmin{download.identifier}" target="_blank">{vz:prepareFilename(filename:download.name,removeUnderscore:1)}</a></span>
+                <span>(<vz:filesize filesize="{download.size}" />)</span>
+			</li>
+		</f:for>
+	</ul>
+</div>
 
 <f:if condition="{archivePath}">
-    <a href="/fileadmin{archivePath}"><f:translate key="LLL:EXT:vz_downloads/Resources/Private/Language/locallang.xlf:list.download_archive_label" /></a>
+<div class="vz-archive-link"{vz:addEulaTag(downloads:downloads)}>
+    <a class="dlall" href="/fileadmin{archivePath}"><f:translate key="LLL:EXT:vz_downloads/Resources/Private/Language/locallang.xlf:list.download_archive_label" /></a>
+</div>
 </f:if>
 
 </f:section>

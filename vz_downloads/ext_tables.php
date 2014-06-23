@@ -56,7 +56,7 @@ $additionalPageColumns = array(
 		'config' => array(
 			'type' => 'select',
 			'items' => array(
-				array(' --- Bitte wählen --- ',0)
+				array('LLL:EXT:vz_downloads/Resources/Private/Language/locallang_db.xlf:sys_file_metadata.tx_vzdownloads_euladata.default',0)
 			),
 			'foreign_table' => 'tx_vzdownloads_domain_model_eula',
 			'size' => 1,

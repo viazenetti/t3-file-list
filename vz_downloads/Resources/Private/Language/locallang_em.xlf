@@ -4,10 +4,10 @@
 		<header/>
 		<body>
 			<trans-unit id="config.filesTaskId">
-				<source>Task id for updating the fal files index</source>
+				<source>Task id for updating the FAL files index</source>
 			</trans-unit>
             <trans-unit id="config.metadataTaskId">
-                <source>Task id for updating the fal metadata index</source>
+                <source>Task id for updating the FAL metadata index</source>
             </trans-unit>
 		</body>
 	</file>

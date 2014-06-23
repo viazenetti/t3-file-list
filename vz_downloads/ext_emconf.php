@@ -11,17 +11,17 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'Downloads',
-	'description' => '',
+	'title' => 'Downloads by directory',
+	'description' => 'List all files of a selected directory.',
 	'category' => 'plugin',
-	'author' => '',
-	'author_email' => '',
-	'state' => 'alpha',
+	'author' => 'viazenetti GmbH',
+	'author_email' => 'typo3@viazenetti.de',
+	'state' => 'final',
 	'internal' => '',
 	'uploadfolder' => '0',
 	'createDirs' => '',
 	'clearCacheOnLoad' => 0,
-	'version' => '',
+	'version' => '1.0',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '6.2',
