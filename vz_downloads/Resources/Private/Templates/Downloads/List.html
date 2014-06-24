@@ -26,7 +26,7 @@
 </div>
 
 <f:if condition="{archivePath}">
-<div class="vz-archive-link"{vz:addEulaTag(downloads:downloads)}>
+<div class="vz-archive-link"{vz:addEulaTag(getAllIds:1, resetIds:1)}>
     <a class="dlall" href="/fileadmin{archivePath}"><f:translate key="LLL:EXT:vz_downloads/Resources/Private/Language/locallang.xlf:list.download_archive_label" /></a>
 </div>
 </f:if>
