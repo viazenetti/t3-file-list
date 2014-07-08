@@ -16,10 +16,9 @@
 
 	<ul class="csc-uploads">
 		<f:for each="{downloads}" as="download">
-			<li class="{download.extension}"{vz:addEulaTag(id:download.tx_vzdownloads_euladata)} title="Download: {download.name}">
-				<a href="/fileadmin{download.identifier}" target="_blank"><f:image src="typo3conf/templates/images/fileicons/{download.extension}.gif" alt="{download.extension}-file"/></a>
-				<span><a href="/fileadmin{download.identifier}" target="_blank">{vz:prepareFilename(filename:download.name,removeUnderscore:1)}</a></span>
-                <span>(<vz:filesize filesize="{download.size}" />)</span>
+			<li class="csc-uploads-element-{download.extension}"{vz:addEulaTag(id: download.tx_vzdownloads_euladata)} title="Download: {download.name}">
+				<span class="csc-uploads-fileName"><a href="/fileadmin{download.identifier}" target="_blank">{vz:prepareFilename(filename:download.name,removeUnderscore:1)}</a></span>
+                <span>{vz:filesize(filesize: download.size)}</span>
 			</li>
 		</f:for>
 	</ul>

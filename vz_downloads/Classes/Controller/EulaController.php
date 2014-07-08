@@ -50,7 +50,7 @@ class EulaController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController 
 		$eulas = $this->eulaRepository->findAll();
 
 		if(isset($args['id'])) {
-			$idsAr = explode(',', trim($args['id']));
+			$idsAr = array_map('trim', explode(',', $args['id']));
 			$filteredEulas = array();
 			foreach($eulas as $eula) {
 				if(in_array($eula->getUid(), $idsAr)) {

@@ -2,11 +2,19 @@
 <f:layout name="EulaDefault" />
 
 <f:section name="main">
+
+    <div class="note">
+        <h1>Please agree to</h1>
+        <f:for each="{eulas}" as="eula">
+            <h2>{eula.title}</h2>
+        </f:for>
+    </div>
+
     <ul>
         <f:for each="{eulas}" as="eula">
             <li>
-                <h2>{eula.header}</h2>
-                <div class="eula-body">
+                <span><h2>{eula.header}</h2></span>
+                <div class="eula-body" style="-ms-overflow-y:hidden;overflow-y:hidden;">
                     <f:format.html>{eula.body}</f:format.html>
                 </div>
             </li>

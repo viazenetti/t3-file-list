@@ -8,12 +8,11 @@ if (!defined('TYPO3_MODE')) {
 	'Downloadlist',
 	array(
 		'Downloads' => 'list',
-		
 	),
+    
 	// non-cacheable actions
 	array(
-		'Downloads' => 'list',
-		
+		#'Downloads' => 'list',
 	)
 );
 

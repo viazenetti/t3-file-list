@@ -29,7 +29,7 @@ class AddEulaTagViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractView
             unset($GLOBALS['T3_VAR']['EXT']['tx_vzdownloads']['eulaIds']);
         }
 
-        if (isset($ids)) {
+        if (!empty($ids)) {
             return ' data-eula-id="' . $ids . '"';
         }
 
